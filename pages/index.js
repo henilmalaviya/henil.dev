@@ -1,12 +1,12 @@
 import xw from 'xwind'
-import ButtonReact from '@/components/ButtonReact'
-import ButtonStyled from '@/components/ButtonStyled'
+import { Button } from '@mantine/core';
 
 const Index = () => (
   <div css={xw`grid justify-center items-center h-screen space-y-20`}>
     <div css={xw`space-y-20`}>
-      <ButtonReact>@emotion/react</ButtonReact>
-      <ButtonStyled>@emotion/styled</ButtonStyled>
+      <Button>
+        Hello World
+      </Button>
     </div>
   </div>
 )
