@@ -24,15 +24,22 @@ const useStylesForSectionOne = createStyles((theme) => ({
     justifyContent: "space-between",
     paddingTop: theme.spacing.xl * 4,
     paddingBottom: theme.spacing.xl * 4,
+
+    [theme.fn.smallerThan("md")]: {
+      paddingTop: theme.spacing.xl * 2,
+      paddingBottom: theme.spacing.xl * 2,
+      flexDirection: "column",
+    },
   },
 
   content: {
     maxWidth: 480,
-    marginRight: theme.spacing.xl * 3,
+    marginLeft: theme.spacing.xl * 3,
 
     [theme.fn.smallerThan("md")]: {
       maxWidth: "100%",
-      marginRight: 0,
+      marginLeft: 0,
+      paddingTop: theme.spacing.xl,
     },
   },
 
@@ -48,28 +55,24 @@ const useStylesForSectionOne = createStyles((theme) => ({
     },
   },
 
-  control: {
-    [theme.fn.smallerThan("xs")]: {
-      flex: 1,
-    },
-  },
-
   image: {
     flex: 1,
 
     [theme.fn.smallerThan("md")]: {
-      display: "none",
+      marginLeft: "auto",
+      marginRight: "auto",
+      width: "30%",
     },
   },
 
   highlight: {
-    position: "relative",
     backgroundColor: theme.fn.variant({
       variant: "light",
       color: theme.primaryColor,
     }).background,
     borderRadius: theme.radius.sm,
-    padding: "4px 12px",
+    padding: "4px 5px",
+    margin: "0px 7px",
   },
 }));
 
@@ -79,13 +82,29 @@ const SectionOne = () => {
     <div className={classes.root}>
       <Container>
         <div className={classes.inner}>
+          <Image
+            src='/img/henil-malaviya.jpg'
+            alt="It's Me"
+            withPlaceholder
+            className={classes.image}
+            radius='50%'
+            placeholder={
+              <Text align='center'>My Image Could Not Load! :(</Text>
+            }
+          />
           <div className={classes.content}>
-            <Title className={classes.title}>Hey, I'm Henil</Title>
+            <Title className={classes.title}>
+              Hey, I'm <span className={classes.highlight}>Henil</span>
+            </Title>
             <Text color='dimmed' mt='md'>
-              I am a Full Stack web Developer with a goal to help the Software
-              Community. I do most of the projects my self and try to be better
-              at my work. I have skills ranging from HTML, CSS, JavaScript to
-              NodeJs, React, NextJs, NuxtJs, Svelte, VueJs and more...
+              I am a
+              <span className={classes.highlight}>
+                Full Stack web developer
+              </span>
+              with a goal to help the Software Community. I do most of the
+              projects my self and try to be better at my work. I have skills
+              ranging from HTML, CSS, JavaScript to NodeJs, React, NextJs,
+              NuxtJs, Svelte, VueJs and more...
             </Text>
 
             <Group mt={30}>
@@ -96,15 +115,6 @@ const SectionOne = () => {
               </Link>
             </Group>
           </div>
-          <Image
-            src='/img/henil-malaviya.jpg'
-            alt="It's Me"
-            withPlaceholder
-            className={classes.image}
-            placeholder={
-              <Text align='center'>My Image Could Not Load! :(</Text>
-            }
-          />
         </div>
       </Container>
     </div>
