@@ -2,18 +2,20 @@ import Header from "@/components/common/Header";
 
 import {
   createStyles,
-  Image,
   Container,
   Title,
   Button,
   Group,
   Text,
   Divider,
+  Avatar,
 } from "@mantine/core";
 
 import Link from "next/link";
 
 import SocialLink from "@/components/SocialLink";
+
+import MyImage from "@/public/img/henil-malaviya.jpg";
 
 const useStylesForSectionOne = createStyles((theme) => ({
   root: {
@@ -57,6 +59,8 @@ const useStylesForSectionOne = createStyles((theme) => ({
 
   image: {
     flex: 1,
+    objectFit: "fill",
+    height: "fit-content",
 
     [theme.fn.smallerThan("md")]: {
       marginLeft: "auto",
@@ -82,8 +86,8 @@ const SectionOne = () => {
     <div className={classes.root}>
       <Container>
         <div className={classes.inner}>
-          <Image
-            src='/img/henil-malaviya.jpg'
+          <Avatar
+            src={MyImage.src}
             alt="It's Me"
             withPlaceholder
             className={classes.image}
