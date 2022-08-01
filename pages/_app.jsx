@@ -12,7 +12,7 @@ export default function App(props) {
     <>
       <QueryClientProvider client={queryClient}>
         <Head>
-          <title>Page title</title>
+          <title>Henil Malaviya</title>
           <meta
             name='viewport'
             content='minimum-scale=1, initial-scale=1, width=device-width'
