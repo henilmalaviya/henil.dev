@@ -13,6 +13,8 @@ import {
 import { useDisclosure } from "@mantine/hooks";
 import Link from "next/link";
 
+import ToggleTheme from "@/components/ToggleTheme";
+
 const HEADER_HEIGHT = 60;
 
 const useStyles = createStyles((theme) => ({
@@ -45,6 +47,8 @@ const useStyles = createStyles((theme) => ({
   },
 
   links: {
+    width: "100%",
+
     [theme.fn.smallerThan("sm")]: {
       display: "none",
     },
@@ -138,11 +142,11 @@ export default function HeaderResponsive({ activeLink }) {
   return (
     <Header height={HEADER_HEIGHT} className={classes.root}>
       <Container className={classes.header}>
-        {/* <Code color='blue'>
-          <Text size='lg'>Henil Malaviya</Text>
-        </Code> */}
         <Group spacing={5} className={classes.links}>
           {items}
+          <div style={{ marginLeft: "auto" }}>
+            <ToggleTheme></ToggleTheme>
+          </div>
         </Group>
         <Burger
           opened={opened}
