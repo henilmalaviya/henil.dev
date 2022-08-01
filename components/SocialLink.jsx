@@ -1,6 +1,10 @@
 import { ActionIcon } from "@mantine/core";
 
-import { IconBrandGithub, IconBrandTwitter } from "@tabler/icons";
+import {
+  IconBrandGithub,
+  IconBrandTwitter,
+  IconBrandYoutube,
+} from "@tabler/icons";
 
 const socials = {
   github: {
@@ -13,10 +17,10 @@ const socials = {
     styleColor: "#1DA1F2",
     icon: <IconBrandTwitter size={30} />,
   },
-  npm: {
-    href: "https://twitter.com/henil06",
-    styleColor: "#C80000",
-    icon: <IconBrandTwitter size={30} />,
+  youtube: {
+    href: "https://www.youtube.com/channel/UChe1_Uk7eR5fOPnHr3X1CoA",
+    styleColor: "#FF0000",
+    icon: <IconBrandYoutube size={30} />,
   },
 };
 
