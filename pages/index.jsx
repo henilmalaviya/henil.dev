@@ -138,6 +138,7 @@ const SectionTwo = () => {
           <div className={classes.links}>
             <SocialLink to='github' />
             <SocialLink to='twitter' />
+            <SocialLink to='youtube' />
           </div>
         </div>
       </Container>
