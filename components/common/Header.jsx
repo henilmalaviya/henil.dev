@@ -158,6 +158,7 @@ export default function HeaderResponsive({ activeLink }) {
           {(styles) => (
             <Paper className={classes.dropdown} withBorder style={styles}>
               {items}
+              <ToggleTheme></ToggleTheme>
             </Paper>
           )}
         </Transition>
