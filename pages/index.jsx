@@ -89,7 +89,6 @@ const SectionOne = () => {
           <Avatar
             src={MyImage.src}
             alt="It's Me"
-            withPlaceholder
             className={classes.image}
             radius='50%'
             placeholder={
