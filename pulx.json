@@ -1,7 +1,7 @@
 {
     "dependencies": {
         "auth.henil.xyz": {
-            "remote": "http://localhost:3000/pulx.json",
+            "remote": "https://auth.henil.xyz/pulx.json",
             "name": "auth.henil.xyz"
         }
     }
