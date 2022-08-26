@@ -105,11 +105,6 @@ export default function HeaderResponsive({ activeLink }) {
       link: "/",
       linkActive: false,
     },
-    {
-      label: "Blog",
-      link: "/blog",
-      linkActive: false,
-    },
   ];
 
   links = links.map((e) => {

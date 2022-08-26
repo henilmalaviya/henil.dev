@@ -17,6 +17,9 @@ import SocialLink from "@/components/SocialLink";
 
 import MyImage from "@/public/img/henil-malaviya.jpg";
 
+const getAge = (birthDate) =>
+  Math.floor((new Date() - new Date(birthDate).getTime()) / 3.15576e10);
+
 const useStylesForSectionOne = createStyles((theme) => ({
   root: {
     minHeight: "90vh",
@@ -76,12 +79,15 @@ const useStylesForSectionOne = createStyles((theme) => ({
     }).background,
     borderRadius: theme.radius.sm,
     padding: "4px 5px",
-    margin: "0px 7px",
+    margin: "0px 0px",
   },
 }));
 
 const SectionOne = () => {
   const { classes } = useStylesForSectionOne();
+
+  const age = getAge("2006-04-06");
+
   return (
     <div className={classes.root}>
       <Container>
@@ -100,14 +106,14 @@ const SectionOne = () => {
               Hey, I'm <span className={classes.highlight}>Henil</span>
             </Title>
             <Text color='dimmed' mt='md'>
-              I am a
+              I am {age} and a{" "}
               <span className={classes.highlight}>
                 Full Stack web developer
-              </span>
+              </span>{" "}
               with a goal to help the Software Community. I do most of the
               projects my self and try to be better at my work. I have skills
-              ranging from HTML, CSS, JavaScript to NodeJs, React, NextJs,
-              NuxtJs, Svelte, VueJs and more...
+              ranging from HTML, CSS, JavaScript to TypeScript, NodeJs, ReactJs,
+              NextJs, NuxtJs, Svelte, VueJs and more...
             </Text>
 
             <Group mt={30}>
@@ -152,6 +158,7 @@ const SectionTwo = () => {
             <SocialLink to='github' />
             <SocialLink to='twitter' />
             <SocialLink to='youtube' />
+            <SocialLink to='medium' />
           </div>
         </div>
       </Container>

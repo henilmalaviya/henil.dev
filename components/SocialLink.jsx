@@ -4,6 +4,7 @@ import {
   IconBrandGithub,
   IconBrandTwitter,
   IconBrandYoutube,
+  IconBrandMedium,
 } from "@tabler/icons";
 
 const socials = {
@@ -21,6 +22,11 @@ const socials = {
     href: "https://www.youtube.com/channel/UChe1_Uk7eR5fOPnHr3X1CoA",
     styleColor: "#FF0000",
     icon: <IconBrandYoutube size={30} />,
+  },
+  medium: {
+    href: "https://henil06.medium.com/",
+    styleColor: "#292929",
+    icon: <IconBrandMedium size={30} />,
   },
 };
 
