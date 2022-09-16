@@ -106,14 +106,14 @@ const SectionOne = () => {
               Hey, I'm <span className={classes.highlight}>Henil</span>
             </Title>
             <Text color='dimmed' mt='md'>
-              I am {age} and a{" "}
+              I am {age} and currently a self taught{" "}
               <span className={classes.highlight}>
                 Full Stack web developer
               </span>{" "}
-              with a goal to help the Software Community. I do most of the
+              with a goal to become cyber security expert. I do most of the
               projects my self and try to be better at my work. I have skills
               ranging from HTML, CSS, JavaScript to TypeScript, NodeJs, ReactJs,
-              NextJs, NuxtJs, Svelte, VueJs and more...
+              NextJs, NuxtJs, Svelte, VueJs and more... I am also a research nerd.
             </Text>
 
             <Group mt={30}>
