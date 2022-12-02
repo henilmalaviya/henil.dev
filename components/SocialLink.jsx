@@ -14,7 +14,7 @@ const socials = {
     icon: <IconBrandGithub size={30} />,
   },
   twitter: {
-    href: "https://twitter.com/henil06",
+    href: "https://twitter.com/henil0604",
     styleColor: "#1DA1F2",
     icon: <IconBrandTwitter size={30} />,
   },
