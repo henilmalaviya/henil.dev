@@ -1,8 +1,0 @@
-{
-    "dependencies": {
-        "auth.henil.xyz": {
-            "remote": "https://auth.henil.xyz/pulx.json",
-            "name": "auth.henil.xyz"
-        }
-    }
-}
