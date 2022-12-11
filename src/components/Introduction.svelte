@@ -8,11 +8,13 @@
 
 </script>
 
-<div class="w-full min-h-screen flex justify-center px-16 py-32" id="#introduction">
-    <div class="w-[300px]">
-        <div class="w-full avatar">
-            <div class="w-full rounded-full">
-                <img alt="Profile Picture" src="/henil-malaviya.jpg" />
+<div class="introduction w-full min-h-screen flex justify-center px-16 py-32" id="#introduction">
+    <div class="avatar-wrapper">
+        <div class="md:w-[300px] w-[200px]">
+            <div class="w-full avatar">
+                <div class="w-full rounded-full">
+                    <img alt="Profile Picture" src="/henil-malaviya.jpg" />
+                </div>
             </div>
         </div>
     </div>
@@ -29,3 +31,21 @@
 
     </div>
 </div>
+
+<style scoped>
+    .introduction {
+        flex-direction: row;
+    }
+    
+    @media only screen and (max-width: 767px){
+        .introduction {
+            flex-direction: column;
+        }
+        .avatar-wrapper{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+</style>
