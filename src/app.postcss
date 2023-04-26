@@ -20,11 +20,20 @@ a {
 }
 
 a.highlight {
-    @apply cursor-pointer;
+    @apply cursor-pointer drop-shadow-lg shadow-black;
     text-decoration: none !important;
     transition: all 0.25s;
 }
 
 a.highlight:hover {
     text-decoration: underline !important;
+}
+
+@keyframes -global-fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }

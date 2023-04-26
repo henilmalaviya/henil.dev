@@ -27,6 +27,7 @@
  */
 declare module '$env/static/private' {
 	export const USER: string;
+	export const npm_package_devDependencies_saos: string;
 	export const npm_config_user_agent: string;
 	export const npm_package_devDependencies_vite: string;
 	export const npm_package_dependencies_iconify_icon: string;
@@ -124,6 +125,7 @@ declare module '$env/static/public' {
 declare module '$env/dynamic/private' {
 	export const env: {
 		USER: string;
+		npm_package_devDependencies_saos: string;
 		npm_config_user_agent: string;
 		npm_package_devDependencies_vite: string;
 		npm_package_dependencies_iconify_icon: string;

@@ -9,7 +9,10 @@
     slotTrail="place-content-end"
 >
     <svelte:fragment slot="lead">
-        <a href="#about"> About</a>
+        <div class="flex gap-4">
+            <a href="#intro">Intro</a>
+            <a href="#about">About</a>
+        </div>
     </svelte:fragment>
     <svelte:fragment slot="trail"><LightSwitch /></svelte:fragment>
 </AppBar>

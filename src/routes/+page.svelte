@@ -1,4 +1,5 @@
 <script>
+    import AnimatedElement from "@/lib/components/AnimatedElement.svelte";
     import { EMAIL } from "@/lib/const";
     import { Avatar } from "@skeletonlabs/skeleton";
 </script>
@@ -9,7 +10,7 @@
 
 <!-- INTRO SECTION -->
 
-<div id="intro" class="">
+<div id="intro" class="pt-32">
     <div class="highlight text-xl font-bold">Hi, my name is</div>
 
     <div class="mb-6" />
@@ -56,29 +57,36 @@
         class="flex items-start max-md:items-center max-md:flex-col gap-20 max-md:gap-10"
     >
         <!-- Avatar -->
-        <div class="flex-center min-w-[300px] max-w-[350px] max-sm:w-[100px]">
-            <Avatar
-                src={"https://henil.xyz/henil-malaviya.jpg"}
-                rounded="rounded-full"
-                width="min-w-full"
-            />
-        </div>
+        <AnimatedElement>
+            <div
+                class="flex-center min-w-[300px] max-w-[350px] max-sm:w-[100px]"
+            >
+                <Avatar
+                    src={"https://henil.xyz/henil-malaviya.jpg"}
+                    rounded="rounded-full"
+                    width="min-w-full"
+                />
+            </div>
+        </AnimatedElement>
 
         <!-- About -->
-        <div class="max-md:max-w-[350px] max-sm:max-w-fit pr-10">
-            Hello, My name is <span class="highlight">Henil Malaviya</span>. I
-            enjoy creating web applications that provides robust experience of
-            security & UI. I started my journy in
-            <span class="highlight">2019</span> by learning HTML & CSS. In the
-            lockdown time i developed skills in Javascript & Javascript
-            Ecosystem. In 2021 I finally started to love
-            <span class="highlight">Typescript</span>. I loved typescript so
-            much that i never developed apps without typescript. Back in 2022 i
-            learned frameworks like
-            <span class="highlight">React, Vue, NextJs, NuxtJs, NestJs</span>,
-            etc... In the mean time i learned Linux Fundamentals and fell in
-            love with <span class="highlight">Docker</span>. I love finding Bugs
-            in web applications.
-        </div>
+        <AnimatedElement>
+            <div class="max-md:max-w-[350px] max-sm:max-w-fit pr-10">
+                Hello, My name is <span class="highlight">Henil Malaviya</span>.
+                I enjoy creating web applications that provides robust
+                experience of security & UI. I started my journy in
+                <span class="highlight">2019</span> by learning HTML & CSS. In
+                the lockdown time i developed skills in Javascript & Javascript
+                Ecosystem. In 2021 I finally started to love
+                <span class="highlight">Typescript</span>. I loved typescript so
+                much that i never developed apps without typescript. Back in
+                2022 i learned frameworks like
+                <span class="highlight"
+                    >React, Vue, NextJs, NuxtJs, NestJs, SvelteKit</span
+                >, etc... In the mean time i learned Linux Fundamentals and fell
+                in love with <span class="highlight">Docker</span>. I love
+                finding Bugs in web applications.
+            </div>
+        </AnimatedElement>
     </div>
 </div>
