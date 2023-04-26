@@ -30,7 +30,7 @@
         class="max-w-[600px] max-md:max-w-[350px] max-sm:max-w-fit max-sm:pr-12 text-muted"
     >
         I'm a self taught web developer specializing in building backends (and
-        occasionally frontend). I'm focused on buiding robust & secure
+        occasionally frontend). I'm focused on building robust & secure
         applications. My future goal is to become cyber security expert.
     </div>
 
