@@ -44,7 +44,7 @@
 
 <!-- ABOUT SECTION -->
 
-<div id="about px-20">
+<div id="about" class="">
     <div class="title">
         <span class="highlight">00.</span>
         About
