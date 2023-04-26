@@ -29,6 +29,7 @@ declare module '$env/static/private' {
 	export const USER: string;
 	export const npm_config_user_agent: string;
 	export const npm_package_devDependencies_vite: string;
+	export const npm_package_dependencies_iconify_icon: string;
 	export const npm_node_execpath: string;
 	export const WT_PROFILE_ID: string;
 	export const SHLVL: string;
@@ -125,6 +126,7 @@ declare module '$env/dynamic/private' {
 		USER: string;
 		npm_config_user_agent: string;
 		npm_package_devDependencies_vite: string;
+		npm_package_dependencies_iconify_icon: string;
 		npm_node_execpath: string;
 		WT_PROFILE_ID: string;
 		SHLVL: string;

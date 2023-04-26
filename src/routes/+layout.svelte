@@ -12,8 +12,10 @@
 
 <div id="top" />
 <!-- App Shell -->
-<AppShell class="w-[1000px] max-md:w-screen py-4 px-6 scroll-smooth	">
+<AppShell class="py-4 px-12 scroll-smooth pb-20 max-md:px-0 max-md:py-0">
     <Navbar />
-    <div class="mb-8" />
-    <slot />
+    <div class="mb-32" />
+    <div class="px-5">
+        <slot />
+    </div>
 </AppShell>
