@@ -11,38 +11,44 @@
 
 <!-- INTRO SECTION -->
 
-<div id="intro" class="pt-32">
-    <div class="highlight text-xl font-bold">Hi, my name is</div>
+<div id="intro" class="pt-32 max-sm:pt-16">
+    <div class="highlight text-xl max-md:text-base max-sm:text-sm font-bold">
+        Hi, my name is
+    </div>
 
     <div class="mb-6" />
 
-    <div class="text-7xl max-md:text-6xl font-extrabold text-blue">
+    <div
+        class="text-7xl max-md:text-6xl max-sm:text-4xl font-extrabold text-blue"
+    >
         Henil Malaviya.
     </div>
 
     <div class="mb-4" />
 
-    <div class="text-muted text-4xl max-md:text-3xl font-extrabold text-blue">
+    <div
+        class="text-muted text-4xl max-md:text-3xl max-sm:text-2xl font-extrabold text-blue"
+    >
         I build things for the community.
     </div>
 
     <div class="mb-4" />
 
     <div
-        class="max-w-[600px] max-md:max-w-[350px] max-sm:max-w-fit max-sm:pr-12 text-muted"
+        class="max-w-[600px] max-md:max-w-[350px] max-sm:max-w-fit text-muted max-sm:text-sm"
     >
         I'm a self taught web developer specializing in building backends (and
         occasionally frontend). I'm focused on building robust & secure
         applications. My future goal is to become cyber security expert.
     </div>
 
-    <div class="mb-4" />
+    <div class="mb-8" />
 
     <!-- Contact me -->
     <a href={`mailto:${EMAIL}`} class="btn variant-ghost-primary">Contact Me</a>
 </div>
 
-<div class="mb-[460px]" />
+<div class="mb-[460px] max-sm:mb-[400px]" />
 
 <!-- ABOUT SECTION -->
 
@@ -60,13 +66,11 @@
         >
             <!-- Avatar -->
             <!-- <AnimatedElement> -->
-            <div
-                class="flex-center min-w-[300px] max-w-[350px] max-sm:w-[100px]"
-            >
+            <div class="flex-center">
                 <Avatar
                     src={"/henil.jpg"}
                     rounded="rounded-full"
-                    width="min-w-full"
+                    width="w-[350px] max-sm:w-[200px]"
                     class="bg-cover bg-top"
                 />
             </div>
@@ -74,20 +78,16 @@
 
             <!-- About -->
             <!-- <AnimatedElement> -->
-            <div class="max-sm:max-w-[350px] pr-10">
-                Hello, My name is <span class="highlight">Henil Malaviya</span>.
-                I enjoy creating web applications that provides robust
-                experience of security & UI. I started my journy in
-                <span class="highlight">2019</span> by learning HTML & CSS. In
-                the lockdown time i developed skills in Javascript & Javascript
-                Ecosystem. In 2021 I finally started to love
-                <span class="highlight">Typescript</span>. I loved typescript so
-                much that i never developed apps without typescript. Back in
-                2022 i learned frameworks like
-                <span class="highlight"
-                    >React, Vue, NextJs, NuxtJs, NestJs, SvelteKit</span
-                >, etc... In the mean time i learned Linux Fundamentals and fell
-                in love with <span class="highlight">Docker</span>. I love
+            <div class="max-sm:max-w-[350px] pr-32 max-md:pr-0 max-sm:text-sm">
+                Hello, My name is Henil Malaviya. I enjoy creating web
+                applications that provides robust experience of security & UI. I
+                started my journy in 2019 by learning HTML & CSS. In the
+                lockdown time i developed skills in Javascript & Javascript
+                Ecosystem. In 2021 I finally started to love Typescript. I loved
+                typescript so much that i never developed apps without
+                typescript. Back in 2022 i learned frameworks like React, Vue,
+                NextJs, NuxtJs, NestJs, SvelteKit, etc... In the mean time i
+                learned Linux Fundamentals and fell in love with Docker. I love
                 finding Bugs in web applications.
             </div>
             <!-- </AnimatedElement> -->
@@ -110,30 +110,42 @@
             <a
                 href={`mailto:${EMAIL}`}
                 target="_blank"
-                class="btn rounded-sm variant-ghost-error gap-2 w-fit"
+                class="btn max-sm:btn-sm rounded-sm variant-ghost-error gap-2 w-fit"
             >
-                <iconify-icon icon="mdi:email" class="text-4xl" /> Email
+                <iconify-icon
+                    icon="mdi:email"
+                    class="text-4xl max-sm:text-2xl"
+                /> Email
             </a>
             <a
                 href={TWITTER}
                 target="_blank"
-                class="btn rounded-sm variant-ghost-secondary gap-2 w-fit"
+                class="btn max-sm:btn-sm rounded-sm variant-ghost-secondary gap-2 w-fit"
             >
-                <iconify-icon icon="mdi:twitter" class="text-4xl" /> Twitter
+                <iconify-icon
+                    icon="mdi:twitter"
+                    class="text-4xl max-sm:text-2xl"
+                /> Twitter
             </a>
             <a
                 href={GITHUB}
                 target="_blank"
-                class="btn rounded-sm variant-ghost-surface gap-2 w-fit"
+                class="btn max-sm:btn-sm rounded-sm variant-ghost-surface gap-2 w-fit"
             >
-                <iconify-icon icon="mdi:github" class="text-4xl" /> Github
+                <iconify-icon
+                    icon="mdi:github"
+                    class="text-4xl max-sm:text-2xl"
+                /> Github
             </a>
             <a
                 href={YOUTUBE}
                 target="_blank"
-                class="btn rounded-sm variant-ghost-error gap-2 w-fit"
+                class="btn max-sm:btn-sm rounded-sm variant-ghost-error gap-2 w-fit"
             >
-                <iconify-icon icon="mdi:youtube" class="text-4xl" /> Youtube
+                <iconify-icon
+                    icon="mdi:youtube"
+                    class="text-4xl max-sm:text-2xl"
+                /> Youtube
             </a>
         </div>
     </div>

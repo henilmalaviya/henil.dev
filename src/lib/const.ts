@@ -56,7 +56,8 @@ export const PROJECTS = [
         tech: [
             'vscode-icons:file-type-typescript-official',
             'logos:nextjs-icon',
-            'skill-icons:supabase-dark'
+            'skill-icons:supabase-dark',
+            'devicon:vercel-wordmark',
         ]
     }
 ]

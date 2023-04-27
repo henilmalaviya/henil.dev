@@ -15,7 +15,7 @@
 <AppShell class="p-0 scroll-smooth max-md:px-0 max-md:py-0">
     <svelte:fragment slot="pageHeader"><Navbar /></svelte:fragment>
     <div class="mb-0" />
-    <div class="px-10">
+    <div class="px-10 max-sm:px-6">
         <slot />
     </div>
     <svelte:fragment slot="pageFooter">
