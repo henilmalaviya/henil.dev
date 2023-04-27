@@ -1,6 +1,7 @@
 <script>
     import AnimatedElement from "@/lib/components/AnimatedElement.svelte";
-    import { EMAIL } from "@/lib/const";
+    import Projects from "@/lib/components/Projects.svelte";
+    import { EMAIL, GITHUB, PROJECTS, TWITTER, YOUTUBE } from "@/lib/const";
     import { Avatar } from "@skeletonlabs/skeleton";
 </script>
 
@@ -45,33 +46,35 @@
 
 <!-- ABOUT SECTION -->
 
-<div id="about" class="">
-    <div class="title">
-        <span class="highlight">00.</span>
-        About
-    </div>
-    <div class="mb-6" />
+<AnimatedElement>
+    <div id="about" class="">
+        <div class="title">
+            <span class="highlight">00.</span>
+            About
+        </div>
+        <div class="mb-6" />
 
-    <!-- Content -->
-    <div
-        class="flex items-start max-md:items-center max-md:flex-col gap-20 max-md:gap-10"
-    >
-        <!-- Avatar -->
-        <AnimatedElement>
+        <!-- Content -->
+        <div
+            class="flex items-start max-md:items-center max-md:flex-col gap-20 max-md:gap-10"
+        >
+            <!-- Avatar -->
+            <!-- <AnimatedElement> -->
             <div
                 class="flex-center min-w-[300px] max-w-[350px] max-sm:w-[100px]"
             >
                 <Avatar
-                    src={"https://henil.xyz/henil-malaviya.jpg"}
+                    src={"/henil.jpg"}
                     rounded="rounded-full"
                     width="min-w-full"
+                    class="bg-cover bg-top"
                 />
             </div>
-        </AnimatedElement>
+            <!-- </AnimatedElement> -->
 
-        <!-- About -->
-        <AnimatedElement>
-            <div class="max-md:max-w-[350px] max-sm:max-w-fit pr-10">
+            <!-- About -->
+            <!-- <AnimatedElement> -->
+            <div class="max-sm:max-w-[350px] pr-10">
                 Hello, My name is <span class="highlight">Henil Malaviya</span>.
                 I enjoy creating web applications that provides robust
                 experience of security & UI. I started my journy in
@@ -87,6 +90,68 @@
                 in love with <span class="highlight">Docker</span>. I love
                 finding Bugs in web applications.
             </div>
-        </AnimatedElement>
+            <!-- </AnimatedElement> -->
+        </div>
     </div>
-</div>
+</AnimatedElement>
+
+<div class="mb-[100px]" />
+
+<!-- Links Section -->
+
+<AnimatedElement>
+    <div id="links" class="">
+        <div class="title">
+            <span class="highlight">01.</span>
+            Links
+        </div>
+        <div class="mb-6" />
+        <a
+            href={`mailto:${EMAIL}`}
+            target="_blank"
+            class="btn rounded-sm variant-ghost-error gap-2 w-fit"
+        >
+            <iconify-icon icon="mdi:email" class="text-4xl" /> Email
+        </a>
+        <a
+            href={TWITTER}
+            target="_blank"
+            class="btn rounded-sm variant-ghost-secondary gap-2 w-fit"
+        >
+            <iconify-icon icon="mdi:twitter" class="text-4xl" /> Twitter
+        </a>
+        <a
+            href={GITHUB}
+            target="_blank"
+            class="btn rounded-sm variant-ghost-surface gap-2 w-fit"
+        >
+            <iconify-icon icon="mdi:github" class="text-4xl" /> Github
+        </a>
+        <a
+            href={YOUTUBE}
+            target="_blank"
+            class="btn rounded-sm variant-ghost-error gap-2 w-fit"
+        >
+            <iconify-icon icon="mdi:youtube" class="text-4xl" /> Youtube
+        </a>
+    </div>
+</AnimatedElement>
+
+<div class="mb-[100px]" />
+
+<!-- Projects Section -->
+<AnimatedElement>
+    <div id="projects" class="">
+        <div class="title">
+            <span class="highlight">02.</span>
+            Projects
+        </div>
+        <div class="mb-6" />
+
+        <div class="flex gap-3 flex-wrap">
+            <Projects />
+        </div>
+    </div>
+</AnimatedElement>
+
+<div class="mb-[200px]" />

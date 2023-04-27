@@ -12,10 +12,19 @@
 
 <div id="top" />
 <!-- App Shell -->
-<AppShell class="p-0 scroll-smooth pb-20 max-md:px-0 max-md:py-0">
-    <Navbar />
+<AppShell class="p-0 scroll-smooth max-md:px-0 max-md:py-0">
+    <svelte:fragment slot="pageHeader"><Navbar /></svelte:fragment>
     <div class="mb-0" />
     <div class="px-10">
         <slot />
     </div>
+    <svelte:fragment slot="pageFooter">
+        <div class="w-full py-3 flex-center gap-2">
+            <a
+                href="https://www.patreon.com/henil"
+                target="_blank"
+                class="btn variant-ghost-tertiary">Sponser Me</a
+            >
+        </div>
+    </svelte:fragment>
 </AppShell>

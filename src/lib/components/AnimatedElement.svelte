@@ -2,6 +2,6 @@
     import Saos from "saos";
 </script>
 
-<Saos animation={"-global-fade-in 1s"}>
+<Saos top={150} animation={"fade-in 0.6s ease-in both"} once>
     <slot />
 </Saos>

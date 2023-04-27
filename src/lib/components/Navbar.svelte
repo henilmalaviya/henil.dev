@@ -12,6 +12,8 @@
         <div class="flex gap-4">
             <a href="#intro">Intro</a>
             <a href="#about">About</a>
+            <a href="#links">Links</a>
+            <a href="#projects">Projects</a>
         </div>
     </svelte:fragment>
     <svelte:fragment slot="trail"><LightSwitch /></svelte:fragment>

@@ -8,7 +8,8 @@ html, body {
 }
 
 a {
-    @apply h-fit;
+    @apply w-fit h-fit;
+    text-decoration: none !important;
 }
 
 .text-muted {
@@ -21,7 +22,6 @@ a {
 
 a.highlight {
     @apply cursor-pointer drop-shadow-lg shadow-black;
-    text-decoration: none !important;
     transition: all 0.25s;
 }
 
@@ -29,7 +29,7 @@ a.highlight:hover {
     text-decoration: underline !important;
 }
 
-@keyframes -global-fade-in {
+@keyframes fade-in {
   0% {
     opacity: 0;
   }

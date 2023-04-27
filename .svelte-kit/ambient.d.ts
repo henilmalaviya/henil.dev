@@ -89,6 +89,7 @@ declare module '$env/static/private' {
 	export const npm_command: string;
 	export const PNPM_SCRIPT_SRC_DIR: string;
 	export const npm_package_scripts_preview: string;
+	export const npm_package_devDependencies__types_hosted_git_info: string;
 	export const HOSTTYPE: string;
 	export const WSL2_GUI_APPS_ENABLED: string;
 	export const WSLENV: string;
@@ -187,6 +188,7 @@ declare module '$env/dynamic/private' {
 		npm_command: string;
 		PNPM_SCRIPT_SRC_DIR: string;
 		npm_package_scripts_preview: string;
+		npm_package_devDependencies__types_hosted_git_info: string;
 		HOSTTYPE: string;
 		WSL2_GUI_APPS_ENABLED: string;
 		WSLENV: string;
