@@ -106,34 +106,36 @@
             Links
         </div>
         <div class="mb-6" />
-        <a
-            href={`mailto:${EMAIL}`}
-            target="_blank"
-            class="btn rounded-sm variant-ghost-error gap-2 w-fit"
-        >
-            <iconify-icon icon="mdi:email" class="text-4xl" /> Email
-        </a>
-        <a
-            href={TWITTER}
-            target="_blank"
-            class="btn rounded-sm variant-ghost-secondary gap-2 w-fit"
-        >
-            <iconify-icon icon="mdi:twitter" class="text-4xl" /> Twitter
-        </a>
-        <a
-            href={GITHUB}
-            target="_blank"
-            class="btn rounded-sm variant-ghost-surface gap-2 w-fit"
-        >
-            <iconify-icon icon="mdi:github" class="text-4xl" /> Github
-        </a>
-        <a
-            href={YOUTUBE}
-            target="_blank"
-            class="btn rounded-sm variant-ghost-error gap-2 w-fit"
-        >
-            <iconify-icon icon="mdi:youtube" class="text-4xl" /> Youtube
-        </a>
+        <div class="flex gap-2 flex-wrap">
+            <a
+                href={`mailto:${EMAIL}`}
+                target="_blank"
+                class="btn rounded-sm variant-ghost-error gap-2 w-fit"
+            >
+                <iconify-icon icon="mdi:email" class="text-4xl" /> Email
+            </a>
+            <a
+                href={TWITTER}
+                target="_blank"
+                class="btn rounded-sm variant-ghost-secondary gap-2 w-fit"
+            >
+                <iconify-icon icon="mdi:twitter" class="text-4xl" /> Twitter
+            </a>
+            <a
+                href={GITHUB}
+                target="_blank"
+                class="btn rounded-sm variant-ghost-surface gap-2 w-fit"
+            >
+                <iconify-icon icon="mdi:github" class="text-4xl" /> Github
+            </a>
+            <a
+                href={YOUTUBE}
+                target="_blank"
+                class="btn rounded-sm variant-ghost-error gap-2 w-fit"
+            >
+                <iconify-icon icon="mdi:youtube" class="text-4xl" /> Youtube
+            </a>
+        </div>
     </div>
 </AnimatedElement>
 
