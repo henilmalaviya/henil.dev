@@ -23,7 +23,7 @@
             <a
                 href="https://www.patreon.com/henil"
                 target="_blank"
-                class="btn variant-ghost-tertiary">Sponser Me</a
+                class="btn variant-ghost-tertiary">Sponsor Me</a
             >
         </div>
     </svelte:fragment>
