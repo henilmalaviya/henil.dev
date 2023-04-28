@@ -31,6 +31,9 @@ export const ICONS = {
     MYSQL: 'logos:mysql',
     PHP: 'logos:php',
     VITE: 'vscode-icons:file-type-vite',
+    DOCKER: 'logos:docker-icon',
+    LINUX: 'logos:linux-tux',
+    KALI_LINUX: 'simple-icons:kalilinux'
 }
 
 export const PROJECTS = [

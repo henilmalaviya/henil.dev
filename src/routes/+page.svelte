@@ -101,9 +101,9 @@
                     Fundamentals and fell in love with Docker. I love finding
                     Bugs in web applications.
                 </p>
-                <div class="flex gap-3">
+                <div class="flex gap-3 flex-wrap">
                     <p>Tech Used:</p>
-                    <div class="flex-center gap-2 text-3xl">
+                    <div class="flex-center flex-wrap gap-2 text-3xl">
                         <iconify-icon icon={ICONS.SVELTE} />
                         <iconify-icon icon={ICONS.TYPESCRIPT} />
                         <iconify-icon icon={ICONS.GITHUB} />
@@ -122,6 +122,9 @@
                         <iconify-icon icon={ICONS.MYSQL} />
                         <iconify-icon icon={ICONS.PHP} />
                         <iconify-icon icon={ICONS.VITE} />
+                        <iconify-icon icon={ICONS.DOCKER} />
+                        <iconify-icon icon={ICONS.LINUX} />
+                        <iconify-icon icon={ICONS.KALI_LINUX} />
                     </div>
                 </div>
             </div>
