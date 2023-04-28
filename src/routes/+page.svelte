@@ -1,7 +1,14 @@
 <script>
     import AnimatedElement from "@/lib/components/AnimatedElement.svelte";
     import Projects from "@/lib/components/Projects.svelte";
-    import { EMAIL, GITHUB, PROJECTS, TWITTER, YOUTUBE } from "@/lib/const";
+    import {
+        EMAIL,
+        GITHUB,
+        ICONS,
+        PROJECTS,
+        TWITTER,
+        YOUTUBE,
+    } from "@/lib/const";
     import { Avatar } from "@skeletonlabs/skeleton";
 </script>
 
@@ -78,18 +85,47 @@
 
             <!-- About -->
             <!-- <AnimatedElement> -->
-            <div class="max-sm:max-w-[350px] pr-32 max-md:pr-0 max-sm:text-sm">
-                Hello, My name is Henil Malaviya. I enjoy creating web
-                applications that provides robust experience of security & UI. I
-                started my journy in 2019 by learning HTML & CSS. In the
-                lockdown time i developed skills in Javascript & Javascript
-                Ecosystem. In 2021 I finally started to love Typescript. I loved
-                typescript so much that i never developed apps without
-                typescript. Back in 2022 i learned frameworks like React, Vue,
-                NextJs, NuxtJs, NestJs, SvelteKit, etc... In the mean time i
-                learned Linux Fundamentals and fell in love with Docker. I love
-                finding Bugs in web applications.
+            <div
+                class="max-sm:max-w-[350px] pr-32 max-md:pr-0 max-sm:text-sm flex flex-col gap-6"
+            >
+                <p>
+                    Hello, My name is Henil Malaviya. I enjoy creating web
+                    applications that provides robust experience of security &
+                    UI. I started my journy in 2019 by learning HTML & CSS. In
+                    the lockdown time i developed skills in Javascript &
+                    Javascript Ecosystem. In 2021 I finally started to love
+                    Typescript. I loved typescript so much that i never
+                    developed apps without typescript. Back in 2022 i learned
+                    frameworks like React, Vue, NextJs, NuxtJs, NestJs,
+                    SvelteKit, etc... In the mean time i learned Linux
+                    Fundamentals and fell in love with Docker. I love finding
+                    Bugs in web applications.
+                </p>
+                <div class="flex gap-3">
+                    <p>Tech Used:</p>
+                    <div class="flex-center gap-2 text-3xl">
+                        <iconify-icon icon={ICONS.SVELTE} />
+                        <iconify-icon icon={ICONS.TYPESCRIPT} />
+                        <iconify-icon icon={ICONS.GITHUB} />
+                        <iconify-icon icon={ICONS.VERCEL} />
+                        <iconify-icon icon={ICONS.MONGODB} />
+                        <iconify-icon icon={ICONS.NEXTJS} />
+                        <iconify-icon icon={ICONS.SUPABASE} />
+                        <iconify-icon icon={ICONS.JAVASCRIPT} />
+                        <iconify-icon icon={ICONS.CSS} />
+                        <iconify-icon icon={ICONS.HTML} />
+                        <iconify-icon icon={ICONS.SCSS} />
+                        <iconify-icon icon={ICONS.REACT} />
+                        <iconify-icon icon={ICONS.VUE} />
+                        <iconify-icon icon={ICONS.NUXT} />
+                        <iconify-icon icon={ICONS.NESTJS} />
+                        <iconify-icon icon={ICONS.MYSQL} />
+                        <iconify-icon icon={ICONS.PHP} />
+                        <iconify-icon icon={ICONS.VITE} />
+                    </div>
+                </div>
             </div>
+
             <!-- </AnimatedElement> -->
         </div>
     </div>
@@ -113,7 +149,7 @@
                 class="btn max-sm:btn-sm rounded-sm variant-ghost-error gap-2 w-fit"
             >
                 <iconify-icon
-                    icon="mdi:email"
+                    icon={ICONS.EMAIL}
                     class="text-4xl max-sm:text-2xl"
                 /> Email
             </a>
@@ -123,7 +159,7 @@
                 class="btn max-sm:btn-sm rounded-sm variant-ghost-secondary gap-2 w-fit"
             >
                 <iconify-icon
-                    icon="mdi:twitter"
+                    icon={ICONS.TWITTER}
                     class="text-4xl max-sm:text-2xl"
                 /> Twitter
             </a>
@@ -133,7 +169,7 @@
                 class="btn max-sm:btn-sm rounded-sm variant-ghost-surface gap-2 w-fit"
             >
                 <iconify-icon
-                    icon="mdi:github"
+                    icon={ICONS.GITHUB}
                     class="text-4xl max-sm:text-2xl"
                 /> Github
             </a>
@@ -143,7 +179,7 @@
                 class="btn max-sm:btn-sm rounded-sm variant-ghost-error gap-2 w-fit"
             >
                 <iconify-icon
-                    icon="mdi:youtube"
+                    icon={ICONS.YOUTUBE}
                     class="text-4xl max-sm:text-2xl"
                 /> Youtube
             </a>
