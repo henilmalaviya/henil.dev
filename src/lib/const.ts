@@ -1,5 +1,4 @@
-import getGithubUrlFromRepo from "@/lib/utils/getGithubUrlFromRepo";
-import getNpmUrlFromPackage from "@/lib/utils/getNpmUrlFromPackage";
+export const NAME = "Henil Malaviya"
 
 export const GITHUB_USERNAME = "henil0604";
 export const GITHUB = `https://github.com/${GITHUB_USERNAME}`;
@@ -8,6 +7,8 @@ export const TWITTER = `https://twitter.com/${TWITTER_USERNAME}`;
 export const YOUTUBE_USERNAME = "henil0604";
 export const YOUTUBE = `https://www.youtube.com/@${YOUTUBE_USERNAME}`;
 export const EMAIL = "me@henil.xyz"
+export const LINKEDIN_USERNAME = "henil-malaviya";
+export const LINKEDIN = `https://www.linkedin.com/in/${LINKEDIN_USERNAME}`
 
 export const ICONS = {
     EMAIL: 'mdi:email',
@@ -33,58 +34,79 @@ export const ICONS = {
     VITE: 'vscode-icons:file-type-vite',
     DOCKER: 'logos:docker-icon',
     LINUX: 'logos:linux-tux',
-    KALI_LINUX: 'simple-icons:kalilinux'
+    KALI_LINUX: 'simple-icons:kalilinux',
+    MOON: 'radix-icons:moon',
+    SUN: 'ph:sun',
+    NPM: 'mdi:npm',
+    LINKEDIN: 'mdi:linkedin'
 }
 
 export const PROJECTS = [
     {
-        type: 'website',
-        name: 'ChatPat',
-        description: "A Room based chat system with full transparancy & Security.",
-        url: "https://chatpat.henil.xyz",
-        urls: {
-            github: getGithubUrlFromRepo('chatpat')
-        },
-        tech: [
-            ICONS.SVELTE,
-            ICONS.TYPESCRIPT,
-            ICONS.VERCEL,
-            ICONS.MONGODB
-        ]
-    },
-    {
-        type: 'github',
         name: 'filic',
-        urls: {
-            npm: getNpmUrlFromPackage('filic')
-        },
+        description: 'Wrapper around Node FS',
+        links: [
+            {
+                href: 'https://www.npmjs.com/package/filic',
+                icon: ICONS.NPM
+            },
+            {
+                href: `${GITHUB}/filic`,
+                icon: ICONS.GITHUB
+            }
+        ],
         tech: [
-            ICONS.TYPESCRIPT,
+            ICONS.TYPESCRIPT
         ]
     },
     {
-        type: 'github',
-        name: 'nabladb',
-        urls: {
-            npm: getNpmUrlFromPackage('nabladb')
-        },
+        name: 'NablaDb',
+        description: 'Quick Database for NodeJs',
+        links: [
+            {
+                href: 'https://www.npmjs.com/package/nabladb',
+                icon: ICONS.NPM
+            },
+            {
+                href: `${GITHUB}/nabladb`,
+                icon: ICONS.GITHUB
+            },
+        ],
         tech: [
-            ICONS.TYPESCRIPT,
-        ]
-    },
-    {
-        type: 'website',
-        name: 'Go',
-        description: "Fully Encrypted Link Shortner",
-        url: 'https://go.henil.xyz',
-        urls: {
-            github: getGithubUrlFromRepo('go.henil.xyz')
-        },
-        tech: [
-            ICONS.TYPESCRIPT,
-            ICONS.NEXTJS,
-            ICONS.SUPABASE,
-            ICONS.VERCEL,
+            ICONS.TYPESCRIPT
         ]
     }
+]
+
+export const LINKS = [
+    {
+        name: `${EMAIL}`,
+        icon: ICONS.EMAIL,
+        href: `mailto:${EMAIL}`,
+        class: 'bg-red-500 text-white'
+    },
+    {
+        name: `@${GITHUB_USERNAME}`,
+        icon: ICONS.GITHUB,
+        href: GITHUB,
+        class: "bg-black text-white"
+    },
+    {
+        name: `@${TWITTER_USERNAME}`,
+        icon: ICONS.TWITTER,
+        href: TWITTER,
+        class: "bg-blue-600 text-white"
+    },
+    {
+        name: `@${YOUTUBE_USERNAME}`,
+        icon: ICONS.YOUTUBE,
+        href: YOUTUBE,
+        class: "bg-red-700 text-white"
+    },
+    {
+        name: `@${LINKEDIN_USERNAME}`,
+        icon: ICONS.LINKEDIN,
+        href: LINKEDIN,
+        class: "bg-blue-900 text-white"
+    },
 ]
