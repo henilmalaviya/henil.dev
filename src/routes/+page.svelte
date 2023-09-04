@@ -173,12 +173,12 @@
 
     #avatar {
         filter: grayscale(0.8);
-        transition: 0.6s;
+        transition: 0.3s;
         box-shadow: 0.35rem 0.35rem 0.4rem rgba(0, 0, 0, 0.3);
     }
 
     #avatar:hover {
         filter: none;
-        box-shadow: 0.8rem 0.8rem 0.8rem rgba(0, 0, 0, 0.5);
+        box-shadow: 0.8rem 0.8rem 0.4rem rgba(0, 0, 0, 0.5);
     }
 </style>
