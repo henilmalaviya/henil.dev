@@ -2,7 +2,7 @@ export const NAME = "Henil Malaviya"
 
 export const GITHUB_USERNAME = "henil0604";
 export const GITHUB = `https://github.com/${GITHUB_USERNAME}`;
-export const TWITTER_USERNAME = "realhenil";
+export const TWITTER_USERNAME = "henilmalaviya";
 export const TWITTER = `https://twitter.com/${TWITTER_USERNAME}`;
 export const YOUTUBE_USERNAME = "henil0604";
 export const YOUTUBE = `https://www.youtube.com/@${YOUTUBE_USERNAME}`;
