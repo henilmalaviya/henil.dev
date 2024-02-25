@@ -1,5 +1,5 @@
 {
-  "name": "main",
+  "name": "henil.xyz",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -10,28 +10,21 @@
     "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch"
   },
   "devDependencies": {
-    "@iconify/svelte": "^3.1.4",
-    "@sveltejs/adapter-auto": "^2.0.0",
-    "@sveltejs/kit": "^1.5.0",
-    "@sveltejs/vite-plugin-svelte": "^2.4.2",
-    "autoprefixer": "^10.4.14",
-    "postcss": "^8.4.24",
-    "postcss-load-config": "^4.0.1",
-    "saos": "^1.3.1",
-    "svelte": "^3.54.0",
-    "svelte-check": "^3.0.1",
-    "svelte-local-storage-store": "^0.5.0",
-    "tailwindcss": "^3.3.2",
+    "@sveltejs/adapter-auto": "^3.0.0",
+    "@sveltejs/kit": "^2.0.0",
+    "@sveltejs/vite-plugin-svelte": "^3.0.0",
+    "autoprefixer": "^10.4.16",
+    "postcss": "^8.4.32",
+    "postcss-load-config": "^5.0.2",
+    "svelte": "^4.2.7",
+    "svelte-check": "^3.6.0",
+    "tailwindcss": "^3.3.6",
     "tslib": "^2.4.1",
     "typescript": "^5.0.0",
-    "vite": "^4.3.0"
+    "vite": "^5.0.3"
   },
   "type": "module",
   "dependencies": {
-    "class-variance-authority": "^0.6.1",
-    "clsx": "^1.2.1",
-    "lucide-svelte": "^0.252.0",
-    "tailwind-merge": "^1.13.2",
-    "tailwindcss-animate": "^1.0.6"
+    "bits-ui": "^0.18.2"
   }
 }
