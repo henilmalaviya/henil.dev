@@ -8,7 +8,7 @@
 
 <div class="flex flex-col lg:flex-row justify-between main-wrapper gap-4">
     <div
-        class="lg:sticky justify-between lg:top-0 max-h-screen lg:w-1/2 lg:max-h-screen flex flex-col pt-16 pb-8 lg:py-32"
+        class="lg:sticky lg:justify-between lg:top-0 max-h-screen lg:w-1/2 lg:max-h-screen flex flex-col pt-16 pb-8 lg:py-32"
     >
         <!-- top -->
         <div class="">
@@ -81,31 +81,38 @@
         <div class="uppercase font-semibold lg:hidden my-4">About</div>
         <div class="flex flex-col gap-4">
             <div>
-                In <span title="Yeh! Before Covid-19 :)">2020</span>, I started
-                to get my hands dirty with web development and fast forward to
-                <span title={new Date().toLocaleDateString()}>today</span>, i
-                have build several different kinds of projects around full stack
-                web development.
+                <span>
+                    In <span title="Yeh! Before Covid-19 :)">2020</span>, I
+                    started to get my hands dirty with web development and fast
+                    forward to
+                    <span title={new Date().toLocaleDateString()}>today</span>,
+                    i have build several different kinds of projects around full
+                    stack web development.
+                </span>
+                <span>
+                    My focus lies in creating projects centered around web
+                    security and simplicity.
+                </span>
             </div>
             <div>
-                I focus to build projects that focuses around web security and
-                simplicity. <span title="maybe in 2022">Recently</span> I
-                stumbled upon <span title="Oh Lovely Svelte!!!">Svelte</span>
-                and loved the simplicity it offers. I have been working with Svelte
-                for more then a year.
-                <span title="Including this one!"
-                    >I built several projects that uses Svelte.</span
-                >
-                <span title="Don't worry i don't hate them :)"
-                    >I have also worked with React and Vue <span
-                        title="in 2021 & 2022">few years ago</span
-                    >.</span
-                >
+                <span>
+                    I have experience working with multiple front-end
+                    technologies such as React, Next.js, Vue, and Nuxt.js, as
+                    well as various back-end technologies including Express.js,
+                    Nest.js, and Hono.
+                </span>
+                <span>
+                    Recently, I discovered Svelte and was impressed by the
+                    simplicity it offers
+                </span>
+                <span>
+                    I have been working with Svelte for more than a year now,
+                    and I have built several projects utilizing it.
+                </span>
             </div>
             <div>
-                When i am not on my laptop, <span title="yeah, pure labor :O"
-                    >i am probably filling collage assignments :)</span
-                >
+                When I'm not on my laptop, you'll likely find me tackling
+                college assignments. :)
             </div>
         </div>
     </div>
