@@ -28,7 +28,7 @@
 />
 
 <div
-    class="flex-grow relative mx-8 lg:mx-auto max-w-screen-lg leading-relaxed selection:bg-black selection:text-white"
+    class="flex-grow relative mx-8 lg:mx-auto max-w-screen-lg leading-relaxed selection:bg-gray-900 selection:text-white"
 >
     <slot />
 </div>
