@@ -9,32 +9,22 @@
     <ActivityRC />
     <div class="my-16"></div>
     <hr class="mb-4" />
-    <div class="text-gray-700 text-sm">
+    <div class="text-sm">
         <div>
-            Built with <a
-                target="_blank"
-                href="https://kit.svelte.dev"
-                class="text-black">SvelteKit</a
-            >
+            Built with
+            <a target="_blank" href="https://kit.svelte.dev">SvelteKit</a>
             +
-            <a href="https://tailwindcss.com" target="_blank" class="text-black"
-                >Tailwind CSS</a
-            >
+            <a href="https://tailwindcss.com" target="_blank">Tailwind CSS</a>
         </div>
         <div>
             Design <b>heavily</b> Inspired by
-            <a
-                href="https://brittanychiang.com"
-                target="_blank"
-                class="text-black">brittanychiang.com</a
-            >
+            <a href="https://brittanychiang.com" target="_blank">
+                brittanychiang.com
+            </a>
         </div>
         <div>
-            Deployed with <a
-                target="_blank"
-                class="text-black"
-                href="https://vercel.com">Vercel</a
-            >
+            Deployed with
+            <a target="_blank" href="https://vercel.com">Vercel</a>
         </div>
     </div>
 </div>
