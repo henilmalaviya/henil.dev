@@ -18,7 +18,7 @@
             >
                 Henil Malaviya
             </div>
-            <div class="text-md lg:text-lg max-w-lg font-medium">
+            <div class="text-md lg:text-xl max-w-lg font-medium">
                 <span
                     use:tippy={{
                         content: "Mostly personal projects",
@@ -27,9 +27,11 @@
                     }}>Indie</span
                 > self-taught web developer.
             </div>
-            <div class="my-1" />
-            <div>I build robust and secure web applications.</div>
-            <div class="my-3" />
+            <div class="my-2" />
+            <div class="text-md tracking-tight text-muted-foreground">
+                I specialize in developing secure and robust web applications.
+            </div>
+            <div class="my-4" />
             <div>
                 <Button
                     href="mailto:{Social.Email}"
