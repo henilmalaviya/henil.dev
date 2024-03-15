@@ -70,9 +70,16 @@
 
 @layer base {
     * {
-        @apply border-border;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
     }
     body {
         @apply bg-background text-foreground;
+        min-height: 100vh;
+        min-height: 100dvh;
+        position: relative;
+        display: flex;
+        flex-direction: column;
     }
 }
