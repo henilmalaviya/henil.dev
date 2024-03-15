@@ -1,9 +1,4 @@
 <script lang="ts">
-    import Icon from "@iconify/svelte";
-    import { Icons } from "$lib/const/icons";
-    import { tippy } from "svelte-tippy";
-    import { Button } from "$lib/components/ui/button";
-    import * as Social from "$lib/const/social";
     import TopLC from "./Top.LC.svelte";
     import BottomLC from "./Bottom.LC.svelte";
 </script>
