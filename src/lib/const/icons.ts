@@ -10,5 +10,8 @@ export const Icons = {
         X: 'tabler:brand-x',
         Github: "mdi:github",
         LinkedIn: "mdi:linkedin",
-    }
+    },
+    GitCommitVertical: "teenyicons:git-commit-outline",
+    Star: "carbon:star",
+    Fork: "jam:fork"
 }

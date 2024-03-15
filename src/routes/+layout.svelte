@@ -1,9 +1,7 @@
 <script lang="ts">
     import "../app.pcss";
-    import Navbar from "./Navbar.svelte";
     import "tippy.js/dist/tippy.css";
     import colors from "tailwindcss/colors";
-    import { onMount } from "svelte";
 
     let lanternRef: HTMLDivElement;
 
@@ -12,11 +10,11 @@
             lanternRef.style.background = `none`;
             return;
         }
-        lanternRef.style.background = `radial-gradient(500px at ${x}px ${y}px, ${colors.gray[200]}, ${colors.transparent} 80%)`;
+        lanternRef.style.background = `radial-gradient(500px at ${x}px ${y}px, ${colors.gray[50]}, ${colors.transparent} 50%)`;
     }
 
     function onMouseMove(event: MouseEvent) {
-        setLantern(event.pageX, event.pageY);
+        // setLantern(event.pageX, event.pageY);
     }
 </script>
 
