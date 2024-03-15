@@ -39,7 +39,7 @@
             </div>
         </div>
         <!-- down -->
-        <div class="pt-10 pb-10 max-lg:pt-10">
+        <div class="pt-10 max-lg:pt-10">
             <div class="flex gap-3">
                 <Button
                     variant="ghost"
@@ -77,7 +77,7 @@
             </div>
         </div>
     </div>
-    <div class="pt-0 lg:pt-32 lg:w-1/2 flex flex-col">
+    <div class="pt-0 max-lg:pb-10 lg:pt-32 lg:w-1/2 flex flex-col">
         <div class="uppercase font-semibold lg:hidden my-4">About</div>
         <div class="flex flex-col gap-4">
             <div>
