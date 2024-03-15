@@ -14,13 +14,11 @@
             Built with <a
                 target="_blank"
                 href="https://kit.svelte.dev"
-                class="text-orange-600">SvelteKit</a
+                class="text-black">SvelteKit</a
             >
             +
-            <a
-                href="https://tailwindcss.com"
-                target="_blank"
-                class="text-blue-600">Tailwind CSS</a
+            <a href="https://tailwindcss.com" target="_blank" class="text-black"
+                >Tailwind CSS</a
             >
         </div>
         <div>
@@ -28,7 +26,7 @@
             <a
                 href="https://brittanychiang.com"
                 target="_blank"
-                class="text-teal-600">brittanychiang.com</a
+                class="text-black">brittanychiang.com</a
             >
         </div>
         <div>

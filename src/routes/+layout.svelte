@@ -18,6 +18,20 @@
     }
 </script>
 
+<svelte:head>
+    <meta name="title" content="Henil Malaviya" />
+    <meta name="description" content="Indie self-taught web developer" />
+    <meta
+        name="keywords"
+        content="henil, malaviya, indie developer, developer, web developer"
+    />
+    <meta name="robots" content="index, follow" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="language" content="English" />
+    <meta name="revisit-after" content="3 days" />
+    <meta name="author" content="Henil Malaviya" />
+</svelte:head>
+
 <svelte:window on:mousemove={onMouseMove} />
 
 <div
