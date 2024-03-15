@@ -39,7 +39,7 @@
             </div>
         </div>
         <!-- down -->
-        <div class="pt-10 max-lg:pt-10">
+        <div class="pt-10 pb-10 max-lg:pt-10">
             <div class="flex gap-3">
                 <Button
                     variant="ghost"
