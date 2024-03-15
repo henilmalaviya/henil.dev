@@ -17,7 +17,7 @@ export const GET = (async (event) => {
 
     return json(data, {
         headers: {
-            'cache-control': 'max-age=1000' // 1 minute cache
+            'cache-control': 'max-age=30' // cache
         }
     });
 }) satisfies RequestHandler

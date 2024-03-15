@@ -3,13 +3,12 @@
     import type { GithubResponse } from "./api/github/type";
     import Icon from "@iconify/svelte";
     import { Icons } from "$lib/const/icons";
-    import { Button } from "$lib/components/ui/button";
     import moment from "moment";
     import tippy from "svelte-tippy";
     import { Skeleton } from "$lib/components/ui/skeleton";
 
-    let apiResponse: Promise<GithubResponse> | null = new Promise((resolve) =>
-        setTimeout(resolve, 99999)
+    let apiResponse: Promise<GithubResponse> | null = new Promise((_, reject) =>
+        setTimeout(reject, 1000)
     );
 
     onMount(async () => {
@@ -18,11 +17,42 @@
 </script>
 
 {#await apiResponse}
-    <!-- <div>
-        <div>
-            <Skeleton class="h-[20px] w-[100px]" />
+    <div>
+        <div class="my-2">
+            <Skeleton class="h-[25px] w-[80px]" />
         </div>
-    </div> -->
+        <Skeleton class="mb-3 w-full h-[3px]" />
+        <div>
+            <div>
+                <Skeleton class="h-[18px] w-[150px]" />
+            </div>
+            <div class="my-2"></div>
+            <div class="space-y-1">
+                {#each Array(3) as i}
+                    <div
+                        class="flex p-2 justify-start items-center w-full max-h-fit gap-2"
+                    >
+                        <Skeleton class="w-[40px] h-[40px]" />
+                        <Skeleton class="w-full h-[25px]" />
+                    </div>
+                {/each}
+            </div>
+        </div>
+
+        <div class="my-4"></div>
+
+        <div>
+            <div>
+                <Skeleton class="h-[18px] w-[150px]" />
+            </div>
+            <div class="my-2"></div>
+            <div class="space-y-3">
+                {#each Array(3) as i}
+                    <Skeleton class="w-full h-[100px]" />
+                {/each}
+            </div>
+        </div>
+    </div>
 {:then data}
     <div>
         <div class="uppercase font-semibold my-2">Activity</div>
@@ -74,9 +104,9 @@
                                     <span
                                         class="text-muted-foreground text-xs"
                                         title={commit.timestamp}
-                                        >({moment(
-                                            commit.timestamp
-                                        ).fromNow()})</span
+                                        >({moment(commit.timestamp).fromNow(
+                                            true
+                                        )})</span
                                     >
                                 </div>
                             </div>
@@ -164,4 +194,6 @@
             {/if}
         </div>
     </div>
+{:catch error}
+    <!--  -->
 {/await}

@@ -9,6 +9,6 @@
 </script>
 
 <div
-    class={cn("animate-pulse rounded-md bg-theme-600", className)}
+    class={cn("animate-pulse rounded-md bg-gray-300", className)}
     {...$$restProps}
 />
