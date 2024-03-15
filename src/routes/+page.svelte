@@ -12,13 +12,13 @@
     >
         <!-- top -->
         <div class="">
-            <div class="text-xl md:text-2xl">Hey, I am</div>
+            <div class="text-lg md:text-2xl">Hey, I am</div>
             <div
                 class="text-4xl leading-tight md:leading-snug md:text-5xl font-extrabold"
             >
                 Henil Malaviya
             </div>
-            <div class="text-md lg:text-xl max-w-lg font-medium">
+            <div class="text-lg lg:text-xl max-w-lg font-medium">
                 <span
                     use:tippy={{
                         content: "Mostly personal projects",
@@ -28,7 +28,7 @@
                 > self-taught web developer.
             </div>
             <div class="my-2" />
-            <div class="text-md tracking-tight text-muted-foreground">
+            <div class="text-md tracking-tight text-gray-700">
                 I specialize in developing secure and robust web applications.
             </div>
             <div class="my-4" />
