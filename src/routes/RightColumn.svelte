@@ -6,7 +6,7 @@
 <div class="pt-0 pb-16 lg:pt-32 lg:w-1/2 flex flex-col">
     <AboutRC />
     <div class="my-3"></div>
-    <ActivityRC />
+    <!-- <ActivityRC /> -->
     <div class="my-16"></div>
     <hr class="mb-4" />
     <div class="text-sm">
