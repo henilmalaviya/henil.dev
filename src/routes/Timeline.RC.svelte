@@ -38,7 +38,7 @@
 					class="relative group/card hover:!opacity-100 transition-all group-hover/card-list:opacity-60 hover:no-underline"
 				>
 					<div
-						class="z-[-1] absolute inset-0 w-full h-full max-md:border group-hover/card:bg-theme-50 group-hover/card:border group-hover/card:border-theme-500 transition rounded-md"
+						class="z-[-1] absolute inset-0 w-full h-full group-hover/card:bg-theme-50 group-hover/card:border group-hover/card:border-theme-500 transition rounded-md"
 					></div>
 					<div
 						class="hidden group-hover/card:block absolute top-0 right-0 p-3"
