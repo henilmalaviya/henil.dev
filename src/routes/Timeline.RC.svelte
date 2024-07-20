@@ -15,12 +15,11 @@
 
 	const experiences: TimelineItem[] = [
 		{
-			title: 'React Intern at Ssessa',
-			description:
-				'Developing and maintaining react based web applications.',
+			title: 'Application Developer Intern at Ssessa',
+			description: 'Developing and maintaining React based products.',
 			range: [new Date('13 May 2024'), null],
 			href: 'https://ssessa.com',
-			tags: ['React', 'JavaScript', 'React-Redux'],
+			tags: ['Typescript', 'React', 'JavaScript', 'React-Redux'],
 		},
 	];
 </script>
