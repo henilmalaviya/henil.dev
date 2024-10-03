@@ -1,5 +1,6 @@
 <script lang="ts">
 	import Icon from '@iconify/svelte';
+	import moment from 'moment';
 
 	interface TimelineItem {
 		title: string;
@@ -16,10 +17,16 @@
 	const experiences: TimelineItem[] = [
 		{
 			title: 'Application Developer Intern at Ssessa',
-			description: 'Developing and maintaining React based products.',
-			range: [new Date('13 May 2024'), null],
+			description: 'Developed and maintained React based product.',
+			range: [new Date('13 May 2024'), new Date('03 Oct 2024 23:59:59')],
 			href: 'https://ssessa.com',
-			tags: ['Typescript', 'React', 'JavaScript', 'React-Redux'],
+			tags: [
+				'Typescript',
+				'React.js',
+				'JavaScript',
+				'React-Redux',
+				'Documentation',
+			],
 		},
 	];
 </script>
@@ -30,7 +37,9 @@
 	<div class="flex flex-col gap-4">
 		<div class="flex flex-col gap-6 group/card-list">
 			{#each experiences as event}
-				{@const rangeFull = `${event.range[0].toLocaleDateString('en-US', { dateStyle: 'long' })} - ${event.range[1] ? event.range[1].toLocaleDateString('en-US', { dateStyle: 'long' }) : 'Present'}`}
+				{@const startDate = event.range[0]}
+				{@const endDate = event.range[1]}
+				{@const rangeFull = `${startDate.toLocaleDateString('en-US', { dateStyle: 'long' })} - ${endDate ? endDate.toLocaleDateString('en-US', { dateStyle: 'long' }) : 'Present'}`}
 				<a
 					target="_blank"
 					href={event.href}
@@ -54,12 +63,19 @@
 								title={rangeFull}
 								class="leading-7 max-md:leading-normal group-hover/card:text-black transition-all"
 							>
-								{getShortMonth(event.range[0])}
-								{event.range[0].getFullYear()} - {event
-									.range[1] === null
+								{getShortMonth(startDate)}
+								{startDate.getFullYear()} - {endDate === null ||
+								endDate.getTime() > Date.now()
 									? 'Present'
-									: `${getShortMonth(event.range[1])} ${event.range[1].getFullYear()}`}
+									: `${getShortMonth(endDate)} ${endDate.getFullYear()}`}
 							</p>
+							{#if endDate !== null && endDate.getTime() < Date.now()}
+								<p
+									class="text-xs transition-all group-hover/card:text-black"
+								>
+									{moment(startDate).from(endDate, true)}
+								</p>
+							{/if}
 						</div>
 						<div class="flex flex-col gap-1">
 							<h3
