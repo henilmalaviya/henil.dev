@@ -18,7 +18,7 @@
 				placement: 'left',
 				delay: [1000, 0],
 			}}>Indie</span
-		> self-taught web developer.
+		> self-taught dev
 	</div>
 	<div class="my-2" />
 	<div class="text-md tracking-tight text-gray-700">
