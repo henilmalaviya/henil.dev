@@ -33,17 +33,4 @@
 			size="sm">Reach me</Button
 		>
 	</div>
-	<div class="my-8"></div>
-	<div>
-		<h2 class="text-lg font-semibold">Core Principles</h2>
-		<div class="my-2"></div>
-		<ul class="list-inside list-disc">
-			<li>Projects over Certificates</li>
-			<li>Experience over Knowledge</li>
-			<li>Reason over Belief</li>
-			<li>
-				Building what i <b><span class="text-theme-700">need</span></b>
-			</li>
-		</ul>
-	</div>
 </div>
