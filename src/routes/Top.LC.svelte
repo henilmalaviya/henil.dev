@@ -30,7 +30,7 @@
 		<Button
 			href="mailto:{Social.Email}"
 			class="transition-all duration-500 w-fit hover:bg-transparent border-2 border-transparent hover:border-black hover:text-black hover:rounded-[90px]"
-			size="sm">Reach me</Button
+			size="sm">Say Hello!</Button
 		>
 	</div>
 </div>
