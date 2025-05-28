@@ -1,24 +1,19 @@
 <script lang="ts">
-	import '../app.pcss';
-	import 'tippy.js/dist/tippy.css';
+	import GameOfLife from '$lib/components/GameOfLife.svelte';
+	import '../app.css';
+
+	let { children } = $props();
 </script>
 
 <svelte:head>
-	<meta name="title" content="Henil Malaviya" />
-	<meta name="description" content="Indie self-taught web developer" />
-	<meta
-		name="keywords"
-		content="henil, malaviya, indie developer, developer, web developer"
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+	<link
+		href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap"
+		rel="stylesheet"
 	/>
-	<meta name="robots" content="index, follow" />
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<meta name="language" content="English" />
-	<meta name="revisit-after" content="2 days" />
-	<meta name="author" content="Henil Malaviya" />
 </svelte:head>
 
-<div
-	class="flex-grow relative mx-8 lg:mx-auto max-w-screen-lg leading-relaxed selection:bg-gray-900 selection:text-white"
->
-	<slot />
-</div>
+<GameOfLife />
+
+{@render children()}
