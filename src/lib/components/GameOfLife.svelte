@@ -9,10 +9,10 @@
 	let canvas = $state<HTMLCanvasElement | null>(null);
 	let ctx = $state<CanvasRenderingContext2D | null>(null);
 
-	let cellSize = $state(10);
+	let cellSize = $state(30);
 	let brushSize = $state(2);
 	let cellColor = $state('#0891b2');
-	let randomJumpIntervalMs = $state(5000);
+	// let randomJumpIntervalMs = $state(5000);
 	let isPageVisible = $state(true);
 
 	let gol = new GameOfLife();
@@ -204,7 +204,7 @@
 			for (const [x, y] of points) {
 				gol.setBrushCells(x, y, 4);
 			}
-		}, randomJumpIntervalMs + 200);
+		}, 5000);
 
 		return () => {
 			// clearInterval(jumpInterval);
