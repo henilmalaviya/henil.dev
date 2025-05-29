@@ -22,7 +22,7 @@
 	</div>
 {/snippet}
 
-<div class="card glass min-w-fit shadow-md hover:shadow-lg">
+<div class="card glass min-w-fit shadow-md transition hover:shadow-lg">
 	<div class="card-body relative">
 		<div class="absolute -top-2 -right-2">
 			{@render FocusMode()}

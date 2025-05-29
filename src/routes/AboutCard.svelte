@@ -2,7 +2,7 @@
 	import { AGE } from '$lib/const';
 </script>
 
-<div class="card glass w-full shadow-md hover:shadow-lg md:pr-16">
+<div class="card glass w-full shadow-md transition hover:shadow-lg md:pr-16">
 	<div class="card-body gap-2">
 		<h1 class="mg:text-xl text-lg">
 			<span class="text-primary">#</span> about

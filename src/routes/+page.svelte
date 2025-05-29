@@ -13,7 +13,9 @@
 	class="font-geist z-[10] mx-auto flex max-w-3xl flex-col gap-8 px-8 py-16 font-mono md:py-32"
 >
 	<div class="flex flex-col gap-4 md:flex-row md:justify-between">
-		<div class="card glass w-full flex-grow shadow-md hover:shadow-lg">
+		<div
+			class="card glass w-full flex-grow shadow-md transition hover:shadow-lg"
+		>
 			<div class="card-body gap-0">
 				<div class="flex justify-between">
 					<h2 class="text-base md:text-lg">Yo! I am</h2>
