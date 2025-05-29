@@ -14,6 +14,13 @@ export class GameOfLife {
 	private localSimulationInterval: number | null = null;
 	private simulationSpeed = 100;
 
+	// WebSocket data transfer tracking
+	private bytesReceived = 0;
+	private bytesSent = 0;
+	private lastBytesReceived = 0;
+	private lastBytesSent = 0;
+	private dataTransferLogInterval: number | null = null;
+
 	public setView(centerX: number, centerY: number, renderRegionSize: number) {
 		this.centerX = centerX;
 		this.centerY = centerY;
@@ -67,6 +74,7 @@ export class GameOfLife {
 	public pause() {
 		this.isPaused = true;
 		this.stopLocalSimulation();
+		this.stopDataTransferLogging();
 
 		if (this.ws && this.ws.readyState === WebSocket.OPEN) {
 			this.ws.close();
@@ -94,6 +102,7 @@ export class GameOfLife {
 			this.isConnected = true;
 
 			this.stopLocalSimulation();
+			this.startDataTransferLogging();
 
 			this.grid.clear();
 
@@ -101,6 +110,9 @@ export class GameOfLife {
 		};
 
 		this.ws.onmessage = (event) => {
+			// Track received data
+			this.bytesReceived += event.data.length;
+
 			const data = JSON.parse(event.data);
 
 			if (data.command === 'gridSync') {
@@ -121,6 +133,7 @@ export class GameOfLife {
 			this.ws?.close();
 			this.ws = null;
 			this.isConnected = false;
+			this.stopDataTransferLogging();
 
 			if (!this.isPaused) {
 				this.startLocalSimulation();
@@ -134,6 +147,7 @@ export class GameOfLife {
 
 		this.ws.onerror = () => {
 			this.isConnected = false;
+			this.stopDataTransferLogging();
 			if (!this.isPaused) {
 				this.startLocalSimulation();
 			}
@@ -210,7 +224,35 @@ export class GameOfLife {
 	private send(data: object) {
 		if (!this.ws || this.ws.readyState !== WebSocket.OPEN) return;
 
-		this.ws?.send(JSON.stringify(data));
+		const message = JSON.stringify(data);
+		this.bytesSent += message.length;
+		this.ws?.send(message);
+	}
+
+	private startDataTransferLogging() {
+		if (this.dataTransferLogInterval) return;
+
+		this.dataTransferLogInterval = setInterval(() => {
+			const downloadedKB =
+				(this.bytesReceived - this.lastBytesReceived) / 1024;
+			const uploadedKB = (this.bytesSent - this.lastBytesSent) / 1024;
+
+			if (downloadedKB > 0 || uploadedKB > 0) {
+				console.log(
+					`WebSocket Transfer - ⬇️ ${downloadedKB.toFixed(2)} KB/s | ⬆️ ${uploadedKB.toFixed(2)} KB/s`,
+				);
+			}
+
+			this.lastBytesReceived = this.bytesReceived;
+			this.lastBytesSent = this.bytesSent;
+		}, 1000);
+	}
+
+	private stopDataTransferLogging() {
+		if (this.dataTransferLogInterval) {
+			clearInterval(this.dataTransferLogInterval);
+			this.dataTransferLogInterval = null;
+		}
 	}
 
 	private requestGridSync() {

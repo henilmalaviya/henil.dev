@@ -81,17 +81,14 @@
 			isPageVisible = !document.hidden;
 
 			if (!isPageVisible) {
-				// Page is hidden - pause the game
 				gol.pause();
 			} else {
-				// Page is visible - resume the game
 				gol.resume();
 			}
 		}
 
 		document.addEventListener('visibilitychange', handleVisibilityChange);
 
-		// Initial check
 		isPageVisible = !document.hidden;
 
 		return () => {
@@ -160,7 +157,6 @@
 	$effect(() => {
 		if (!isPageVisible) return;
 
-		// this triggers the update
 		const gridSize = gol.grid.size;
 
 		requestAnimationFrame(render);
@@ -174,7 +170,6 @@
 	});
 
 	onMount(() => {
-		// Only initialize if page is visible
 		if (isPageVisible) {
 			gol.init();
 		}
@@ -210,7 +205,6 @@
 			// clearInterval(jumpInterval);
 			clearInterval(randomCellActivationInterval);
 
-			// Clean up WebSocket connection when component unmounts
 			if (gol.ws && gol.ws.readyState === WebSocket.OPEN) {
 				gol.ws.close();
 			}
