@@ -10,7 +10,7 @@
 </svelte:head>
 
 <div
-	class="space-grotesk-600 z-[10] mx-auto flex max-w-3xl flex-col gap-8 px-8 py-16 md:py-32"
+	class="font-geist z-[10] mx-auto flex max-w-3xl flex-col gap-8 px-8 py-16 font-mono md:py-32"
 >
 	<div class="flex flex-col gap-4 md:flex-row md:justify-between">
 		<div class="card glass w-full flex-grow shadow-md hover:shadow-lg">
@@ -31,7 +31,9 @@
 				</div>
 				<h1 class="text-3xl font-bold md:text-4xl">Henil</h1>
 				<h3 class="text-lg md:text-xl">
-					I write lots of <span class="font-mono">functions</span>
+					I write lots of <span class="font-mono tracking-tighter"
+						>functions</span
+					>
 				</h3>
 				<div class="my-2"></div>
 

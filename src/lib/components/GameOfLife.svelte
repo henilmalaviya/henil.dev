@@ -9,7 +9,7 @@
 	let canvas = $state<HTMLCanvasElement | null>(null);
 	let ctx = $state<CanvasRenderingContext2D | null>(null);
 
-	let cellSize = $state(20);
+	let cellSize = $state(10);
 	let brushSize = $state(2);
 	let cellColor = $state('#0891b2');
 	let randomJumpIntervalMs = $state(5000);

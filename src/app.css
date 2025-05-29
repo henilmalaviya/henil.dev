@@ -52,9 +52,9 @@ body {
 	flex-direction: column;
 }
 
-.space-grotesk-600 {
-	font-family: 'Space Grotesk', sans-serif;
+.font-geist {
+	font-family: 'Geist', sans-serif;
 	font-optical-sizing: auto;
-	font-weight: 600;
+	font-weight: 500;
 	font-style: normal;
 }
