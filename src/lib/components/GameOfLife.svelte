@@ -13,6 +13,7 @@
 	let brushSize = $state(2);
 	let cellColor = $state('#0891b2');
 	let randomJumpIntervalMs = $state(5000);
+	let isPageVisible = $state(true);
 
 	let gol = new GameOfLife();
 	gol.url = PUBLIC_GAME_SERVER_URL;
@@ -43,7 +44,7 @@
 	}
 
 	function render() {
-		if (!ctx || !canvas) return;
+		if (!ctx || !canvas || !isPageVisible) return;
 
 		ctx.clearRect(0, 0, canvas.width, canvas.height);
 
@@ -72,9 +73,38 @@
 		canvas.height = innerHeight;
 	});
 
-	// window updates
+	// page visibility updates
 	$effect(() => {
 		if (!browser) return;
+
+		function handleVisibilityChange() {
+			isPageVisible = !document.hidden;
+
+			if (!isPageVisible) {
+				// Page is hidden - pause the game
+				gol.pause();
+			} else {
+				// Page is visible - resume the game
+				gol.resume();
+			}
+		}
+
+		document.addEventListener('visibilitychange', handleVisibilityChange);
+
+		// Initial check
+		isPageVisible = !document.hidden;
+
+		return () => {
+			document.removeEventListener(
+				'visibilitychange',
+				handleVisibilityChange,
+			);
+		};
+	});
+
+	// window updates
+	$effect(() => {
+		if (!browser || !isPageVisible) return;
 
 		function handleResize() {
 			innerWidth = window.innerWidth;
@@ -128,6 +158,8 @@
 	});
 
 	$effect(() => {
+		if (!isPageVisible) return;
+
 		// this triggers the update
 		const gridSize = gol.grid.size;
 
@@ -136,23 +168,31 @@
 
 	// gol updates
 	$effect(() => {
+		if (!isPageVisible) return;
+
 		gol.setView(gol.centerX, gol.centerY, renderRegionSize);
 	});
 
 	onMount(() => {
-		gol.init();
+		// Only initialize if page is visible
+		if (isPageVisible) {
+			gol.init();
+		}
 
-		let jumpInterval = setInterval(() => {
-			const [centerX, centerY] = [
-				getRandomNumber(-25, 25),
-				getRandomNumber(-25, 25),
-			];
+		// let jumpInterval = setInterval(() => {
+		// 	const [centerX, centerY] = [
+		// 		getRandomNumber(-25, 25),
+		// 		getRandomNumber(-25, 25),
+		// 	];
 
-			gol.centerX = centerX;
-			gol.centerY = centerY;
-		}, randomJumpIntervalMs);
+		// 	gol.centerX = centerX;
+		// 	gol.centerY = centerY;
+		// }, randomJumpIntervalMs);
 
 		let randomCellActivationInterval = setInterval(() => {
+			// Only activate cells if page is visible
+			if (!isPageVisible) return;
+
 			let points: [number, number][] = [];
 
 			for (let i = 0; i < 10; i++) {
@@ -167,8 +207,13 @@
 		}, randomJumpIntervalMs + 200);
 
 		return () => {
-			clearInterval(jumpInterval);
+			// clearInterval(jumpInterval);
 			clearInterval(randomCellActivationInterval);
+
+			// Clean up WebSocket connection when component unmounts
+			if (gol.ws && gol.ws.readyState === WebSocket.OPEN) {
+				gol.ws.close();
+			}
 		};
 	});
 </script>
@@ -176,7 +221,7 @@
 <div
 	class="fixed top-0 left-0 flex h-full max-h-screen w-full max-w-screen opacity-15"
 >
-	{#if focusMode.value === false}
+	{#if focusMode.value === false && isPageVisible}
 		<canvas bind:this={canvas} class="h-full w-full"></canvas>
 	{/if}
 </div>
@@ -188,17 +233,23 @@
 		<div
 			class={cn(
 				'status animate-ping',
-				gol.isConnected ? 'status-success' : 'status-error',
+				gol.isConnected && isPageVisible
+					? 'status-success'
+					: 'status-error',
 			)}
 		></div>
 		<div
 			class={cn(
 				'status',
-				gol.isConnected ? 'status-success' : 'status-error',
+				gol.isConnected && isPageVisible
+					? 'status-success'
+					: 'status-error',
 			)}
 		></div>
 	</div>
-	{#if gol.isConnected}
+	{#if !isPageVisible}
+		Simulation paused
+	{:else if gol.isConnected}
 		Simulation online
 	{:else}
 		Simulation offline

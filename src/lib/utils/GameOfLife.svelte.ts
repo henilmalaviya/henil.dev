@@ -9,9 +9,10 @@ export class GameOfLife {
 	public centerY = $state(0);
 	public renderRegionSize = $state(10);
 	public url = $state('');
+	public isPaused = $state(false);
 
 	private localSimulationInterval: number | null = null;
-	private simulationSpeed = 250;
+	private simulationSpeed = 100;
 
 	public setView(centerX: number, centerY: number, renderRegionSize: number) {
 		this.centerX = centerX;
@@ -63,7 +64,26 @@ export class GameOfLife {
 		}
 	}
 
+	public pause() {
+		this.isPaused = true;
+		this.stopLocalSimulation();
+
+		if (this.ws && this.ws.readyState === WebSocket.OPEN) {
+			this.ws.close();
+		}
+	}
+
+	public resume() {
+		this.isPaused = false;
+
+		if (!this.ws || this.ws.readyState === WebSocket.CLOSED) {
+			this.init();
+		}
+	}
+
 	public init() {
+		if (this.isPaused) return;
+
 		this.startLocalSimulation();
 
 		console.log('connecting...');
@@ -102,22 +122,26 @@ export class GameOfLife {
 			this.ws = null;
 			this.isConnected = false;
 
-			this.startLocalSimulation();
+			if (!this.isPaused) {
+				this.startLocalSimulation();
 
-			// try reconnecting
-			setTimeout(() => {
-				this.init();
-			}, 3000);
+				// try reconnecting
+				setTimeout(() => {
+					this.init();
+				}, 3000);
+			}
 		};
 
 		this.ws.onerror = () => {
 			this.isConnected = false;
-			this.startLocalSimulation();
+			if (!this.isPaused) {
+				this.startLocalSimulation();
+			}
 		};
 	}
 
 	private startLocalSimulation() {
-		if (this.localSimulationInterval) return;
+		if (this.localSimulationInterval || this.isPaused) return;
 
 		console.log('Starting local simulation');
 
@@ -126,7 +150,9 @@ export class GameOfLife {
 		}
 
 		this.localSimulationInterval = setInterval(() => {
-			this.stepLocalSimulation();
+			if (!this.isPaused) {
+				this.stepLocalSimulation();
+			}
 		}, this.simulationSpeed);
 	}
 
