@@ -201,9 +201,14 @@
 			}
 		}, 5000);
 
+		let statsInterval = setInterval(() => {
+			gol.requestStatsSync();
+		}, 5000);
+
 		return () => {
 			// clearInterval(jumpInterval);
 			clearInterval(randomCellActivationInterval);
+			clearInterval(statsInterval);
 
 			if (gol.ws && gol.ws.readyState === WebSocket.OPEN) {
 				gol.ws.close();
@@ -221,7 +226,7 @@
 </div>
 
 <div
-	class="fixed right-0 bottom-0 flex w-fit items-center justify-center gap-1 p-2 text-xs"
+	class="fixed right-0 bottom-0 hidden w-fit items-center justify-center gap-1 p-2 text-xs md:flex"
 >
 	<div class="inline-grid *:[grid-area:1/1]">
 		<div

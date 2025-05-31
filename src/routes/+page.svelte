@@ -10,7 +10,7 @@
 </svelte:head>
 
 <div
-	class="font-geist z-[10] mx-auto flex max-w-3xl flex-col gap-8 px-8 py-16 font-mono md:py-32"
+	class="font-geist z-[10] mx-auto flex max-w-3xl flex-col gap-8 px-4 py-16 font-mono md:px-8 md:py-32"
 >
 	<div class="flex flex-col gap-4 md:flex-row md:justify-between">
 		<div
@@ -52,8 +52,4 @@
 	</div>
 
 	<AboutCard />
-
-	<div class="contents max-w-full md:hidden">
-		<GameOfLifeStatsCard />
-	</div>
 </div>
