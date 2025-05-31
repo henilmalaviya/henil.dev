@@ -49,7 +49,7 @@
 				</span>
 			</div>
 			<div class="flex items-center gap-1">
-				👥 Players:
+				👥 Observers:
 				<span class="text-secondary font-semibold">
 					{gameStats.activePlayers}
 				</span>
