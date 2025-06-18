@@ -14,6 +14,7 @@
 	let cellColor = $state('#0891b2');
 	// let randomJumpIntervalMs = $state(5000);
 	let isPageVisible = $state(true);
+	let disconnectTimeout = $state<number | null>(null);
 
 	let gol = new GameOfLife();
 	gol.url = PUBLIC_GAME_SERVER_URL;
@@ -78,13 +79,29 @@
 		if (!browser) return;
 
 		function handleVisibilityChange() {
-			isPageVisible = !document.hidden;
+			const newVisibility = !document.hidden;
 
-			if (!isPageVisible) {
-				gol.pause();
+			if (newVisibility === isPageVisible) return;
+
+			if (!newVisibility) {
+				// Page became invisible - start 60 second countdown
+				disconnectTimeout = setTimeout(() => {
+					gol.pause();
+					disconnectTimeout = null;
+				}, 60000);
 			} else {
-				gol.resume();
+				// Page became visible again
+				if (disconnectTimeout) {
+					// Clear the disconnect timeout if user returned within 60 seconds
+					clearTimeout(disconnectTimeout);
+					disconnectTimeout = null;
+				} else {
+					// User returned after 60 seconds, need to resume
+					gol.resume();
+				}
 			}
+
+			isPageVisible = newVisibility;
 		}
 
 		document.addEventListener('visibilitychange', handleVisibilityChange);
@@ -96,6 +113,11 @@
 				'visibilitychange',
 				handleVisibilityChange,
 			);
+
+			// Clean up timeout if component unmounts
+			if (disconnectTimeout) {
+				clearTimeout(disconnectTimeout);
+			}
 		};
 	});
 
