@@ -15,6 +15,7 @@
 		href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap"
 		rel="stylesheet"
 	/>
+	<title>Henil</title>
 </svelte:head>
 
 {@render children()}
