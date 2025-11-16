@@ -1,42 +1,20 @@
 @import 'tailwindcss';
 
-@plugin "daisyui/theme" {
-	name: 'goatedpickle';
-	default: true;
-	prefersdark: false;
-	color-scheme: 'light';
-	--color-base-100: oklch(98% 0.001 106.423);
-	--color-base-200: oklch(97% 0.001 106.424);
-	--color-base-300: oklch(92% 0.003 48.717);
-	--color-base-content: oklch(0% 0 0);
-	--color-primary: oklch(50% 0.134 242.749);
-	--color-primary-content: oklch(100% 0 0);
-	--color-secondary: oklch(51% 0.096 186.391);
-	--color-secondary-content: oklch(100% 0 0);
-	--color-accent: oklch(51% 0.222 16.935);
-	--color-accent-content: oklch(100% 0 0);
-	--color-neutral: oklch(14% 0 0);
-	--color-neutral-content: oklch(97% 0 0);
-	--color-info: oklch(78% 0.154 211.53);
-	--color-info-content: oklch(30% 0.056 229.695);
-	--color-success: oklch(77% 0.152 181.912);
-	--color-success-content: oklch(27% 0.046 192.524);
-	--color-warning: oklch(75% 0.183 55.934);
-	--color-warning-content: oklch(26% 0.079 36.259);
-	--color-error: oklch(71% 0.194 13.428);
-	--color-error-content: oklch(27% 0.105 12.094);
-	--radius-selector: 0.25rem;
-	--radius-field: 0.25rem;
-	--radius-box: 0.25rem;
-	--size-selector: 0.25rem;
-	--size-field: 0.25rem;
-	--border: 1px;
-	--depth: 1;
-	--noise: 0;
+@theme {
+	--color-background: var(--color-zinc-50);
+	--color-foreground: var(--color-zinc-900);
+	--color-muted: var(--color-zinc-500);
+
+	--color-accent: var(--color-cyan-600);
+
+	--font-geist: 'Geist', sans-serif;
 }
 
-@plugin "daisyui" {
-	themes: goatedpickle --default;
+.dark {
+	--color-background: var(--color-zinc-900);
+	--color-foreground: var(--color-zinc-50);
+
+	--color-accent: var(--color-cyan-500);
 }
 
 html {
@@ -44,17 +22,21 @@ html {
 }
 
 body {
+	@apply bg-background text-foreground/90 font-geist;
+
 	min-height: 100vh;
 	min-height: 100dvh;
 	min-width: 100%;
 
 	display: flex;
 	flex-direction: column;
+	align-items: center;
 }
 
-.font-geist {
-	font-family: 'Geist', sans-serif;
-	font-optical-sizing: auto;
-	font-weight: 500;
-	font-style: normal;
+a.accent {
+	@apply text-accent hover:text-accent/80 underline underline-offset-2;
+}
+
+a.muted {
+	@apply text-muted hover:text-accent/80 underline underline-offset-2;
 }
