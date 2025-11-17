@@ -107,11 +107,11 @@
 	<div class="grid gap-8 sm:grid-cols-2">
 		<div class="flex flex-col gap-4">
 			<h2 class="text-muted font-medium">Experience</h2>
-			<ul
-				class="group/list flex flex-col [&>li]:py-2 [&>li]:transition-opacity hover:[&>li]:opacity-50 hover:[&>li:hover]:opacity-100"
-			>
+			<ul class="group/list flex flex-col">
 				{#each EXPERIENCE as experience}
-					<li>
+					<li
+						class="py-2 transition-opacity group-hover/list:opacity-50 hover:opacity-100"
+					>
 						{@render Card({
 							title: `${experience.role} @ ${experience.company}`,
 							href: experience.href,
@@ -124,11 +124,11 @@
 		</div>
 		<div class="flex flex-col gap-4">
 			<h2 class="text-muted font-medium">Projects</h2>
-			<ul
-				class="group/list flex flex-col [&>li]:py-2 [&>li]:transition-opacity hover:[&>li]:opacity-50 hover:[&>li:hover]:opacity-100"
-			>
+			<ul class="group/list flex flex-col">
 				{#each PROJECTS as project}
-					<li>
+					<li
+						class="py-2 transition-opacity group-hover/list:opacity-50 hover:opacity-100"
+					>
 						{@render Card({
 							title: project.name,
 							href: project.href,
